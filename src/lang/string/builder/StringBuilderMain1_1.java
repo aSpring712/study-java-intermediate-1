@@ -1,0 +1,33 @@
+package lang.string.builder;
+
+/**
+ * String Builder Main 1_1
+ *
+ * @author Kwon Bomi / GitHub: aSpring712
+ * @since 2025-04-15
+ * @version 1.0
+ */
+public class StringBuilderMain1_1 {
+
+	public static void main(String[] args) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("A");
+		sb.append("B");
+		sb.append("C");
+		sb.append("D");
+		System.out.println("sb = " + sb);
+
+		sb.insert(4, "Java");
+		System.out.println("insert = " + sb);
+
+		sb.delete(4, 8);
+		System.out.println("delete = " + sb);
+
+		sb.reverse();
+		System.out.println("reverse = " + sb);
+
+		// StringBuilder -> String
+		String string = sb.toString();
+		System.out.println("string = " + string);
+	}
+}
