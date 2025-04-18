@@ -1,0 +1,28 @@
+package time.quiz;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
+/**
+ * Test Zone
+ *
+ * @author Kwon Bomi / GitHub: aSpring712
+ * @since 2025-04-18
+ * @version 1.0
+ */
+public class TestZone {
+
+	public static void main(String[] args) {
+
+		ZonedDateTime seoulTime = ZonedDateTime.of(LocalDate.of(2024, 1, 1), LocalTime.of(9, 0), ZoneId.of("Asia/Seoul"));
+		ZonedDateTime londonTime = seoulTime.withZoneSameInstant(ZoneId.of("Europe/London"));
+		ZonedDateTime nyTime = seoulTime.withZoneSameInstant(ZoneId.of("America/New_York"));
+
+		System.out.println("서울의 회의 시간: " + seoulTime);
+		System.out.println("런던의 회의 시간: " + londonTime);
+		System.out.println("뉴욕의 회의 시간: " + nyTime);
+	}
+}
